@@ -100,7 +100,7 @@ def generate_answers_batch(queries, titles, top_chunks_per_query, max_input_leng
 BATCH_SIZE = 20
 
 # Load inference data from CSV
-inference_data = pd.read_csv("eval_data.csv")  
+inference_data = pd.read_csv("../data/eval_data.csv")  
 total_samples = len(inference_data)
 
 start_time = time.time()
@@ -131,7 +131,7 @@ total_time = end_time - start_time
 # Save the answers back to a CSV file
 output_df = inference_data.copy()
 output_df["label"] = all_answers
-output_df.to_csv("eval_results.csv", index=False)
+output_df.to_csv("../data/eval_results.csv", index=False)
 
 print(f"Inference completed for {total_samples} samples.")
 print(f"Total time taken: {total_time:.2f} seconds")

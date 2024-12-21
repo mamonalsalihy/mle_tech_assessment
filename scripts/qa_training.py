@@ -143,7 +143,7 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     
     # Load data
-    df = pd.read_csv("training_data.csv")
+    df = pd.read_csv("../data/training_data.csv")
 
     # print(df['abstract_length'].sort_values(ascending=False).tolist())
 
@@ -154,7 +154,7 @@ def main():
 
     # Save the evaluation dataset to a new file
 
-    eval_file = "eval_data.csv"
+    eval_file = "../data/eval_data.csv"
 
     eval_df.to_csv(eval_file, index=False)
 
