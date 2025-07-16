@@ -1,4 +1,4 @@
-# Consensus Scientific Question Answering
+# Scientific Question Answering
 
 ## Overview
 This project is focused on building a system for scientific question answering that meets the latency requirements while maintaining high performance. Given the long lengths of abstracts and the necessity of processing a batch of 20 examples within 3 seconds, the system employs:
